@@ -15,7 +15,7 @@ export class ViagemService {
     return this.http.get(this.API);
   }
 
-  listarById(a:Int32Array) : Observable<any>{
+  listarById(a:any) : Observable<any>{
     return this.http.get(this.API + '/' + a);
   }
 }
