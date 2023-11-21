@@ -2,28 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CadastroPacoteComponent } from './cadastro-pacote/cadastro-pacote.component';
-import { DetalhesPacoteComponent } from './detalhes-pacote/detalhes-pacote.component';
-import { ExclusaoPacoteComponent } from './exclusao-pacote/exclusao-pacote.component';
-import { ListagemPacoteComponent } from './listagem-pacote/listagem-pacote.component';
+import { CadastroViagemComponent } from './cadastro-viagem/cadastro-viagem.component';
+import { DetalhesViagemComponent } from './detalhes-viagem/detalhes-viagem.component';
+import { ExclusaoViagemComponent } from './exclusao-viagem/exclusao-viagem.component';
+import { ListagemViagemComponent } from './listagem-viagem/listagem-viagem.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { AprovacaoPacoteComponent } from './aprovacao-pacote/aprovacao-pacote.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroPacoteComponent,
-    DetalhesPacoteComponent,
-    ExclusaoPacoteComponent,
-    ListagemPacoteComponent,
+    CadastroViagemComponent,
+    DetalhesViagemComponent,
+    ExclusaoViagemComponent,
+    ListagemViagemComponent,
     HeaderComponent,
-    HomeComponent,
-    AprovacaoPacoteComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

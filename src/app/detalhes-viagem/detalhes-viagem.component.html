@@ -1,0 +1,51 @@
+<div class="card">
+  <div class="card-header">
+    Detalhes da viagem
+  </div>
+  <div class="card-body">
+    <div class="form-group row">
+      <label class="col-md-4 col-form-label text-md-right">Destino</label>
+      <div class="col-md-6">
+        <label class="detail-control">{{viagem.destino}}</label>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-4 col-form-label text-md-right">Tipo</label>
+      <div class="col-md-6">
+        <label class="detail-control">{{viagem.tipo}}</label>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-md-4 col-form-label text-md-right">Data de chegada</label>
+      <div class="col-md-6">
+        <label class="detail-control">{{ viagem.chegada | date:'dd/MM/yyyy' }}</label>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-4 col-form-label text-md-right">Data de saída</label>
+      <div class="col-md-6">
+        <label class="detail-control">{{ viagem.saida | date:'dd/MM/yyyy' }}</label>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-4 col-form-label text-md-right">Valor</label>
+      <div class="col-md-6">
+        <label class="detail-control">{{viagem.orcamento | currency : 'BRL'}}</label>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-4 col-form-label text-md-right">Qtde. pessoas</label>
+      <div class="col-md-6">
+        <label class="detail-control">{{viagem.pessoas}}</label>
+      </div>
+    </div>
+    <div class="form-group row mb-0">
+      <div class="col-md-6 offset-md-4">
+        <button routerLink="/listagem" type="submit" class="btn btn-primary btn-sm">
+          Voltar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

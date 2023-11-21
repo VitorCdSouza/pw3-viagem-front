@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header">
+    Minhas viagens
+  </div>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Tipo</th>
+          <th>Data de chegada</th>
+          <th>Data de saída</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of viagens">
+          <td>{{item.destino}}</td>
+          <td>{{item.tipo}}</td>
+          <td>{{ item.chegada | date:'dd/MM/yyyy' }}</td>
+          <td>{{ item.saida | date:'dd/MM/yyyy' }}</td>
+          <td>
+            <button routerLink="/detalhes/{{item.id}}" type="submit" class="btn btn-secondary btn-sm">
+              Detalhes
+            </button>
+            &nbsp;&nbsp;&nbsp;
+            <button routerLink="/exclusao/{{item.id}}" type="submit" class="btn btn-warning btn-sm">
+              Excluir
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="alert alert-warning">
+  Tem certeza que deseja excluir a viagem abaixo?
+</div>
+<div class="card">
+  <div class="card-header">
+    Excluir viagem
+  </div>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Destino</th>
+          <th>Tipo</th>
+          <th>Data de chegada</th>
+          <th>Data de saída</th>
+          <th>Orçamento</th>
+          <th>Qtde. pessoas</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{viagem.destino}}</td>
+          <td>{{viagem.tipo}}</td>
+          <td>{{ viagem.chegada | date:'dd/MM/yyyy' }}</td>
+          <td>{{ viagem.saida | date:'dd/MM/yyyy' }}</td>
+          <td>{{ viagem.orcamento | currency : 'BRL' }}</td>
+          <td>{{viagem.pessoas}}</td>
+          <td>
+            <button routerLink="/listagem" type="submit" class="btn btn-primary btn-sm">
+              Voltar
+            </button>
+            &nbsp;&nbsp;&nbsp;
+            <button type="submit" class="btn btn-danger btn-sm">
+              Confirmar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
